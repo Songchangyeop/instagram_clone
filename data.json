@@ -1,0 +1,80 @@
+{
+    "items": {
+        "name" : "christmas25",
+        "follow" : "true",
+        "story" : "true",
+        "image" : "imgs/christmas.jpg"
+    },
+    "items": {
+        "name" : "mealtrip",
+        "follow" : "false",
+        "story" : "true",
+        "image" : "imgs/meal.jpg"
+    },
+    "items": {
+        "name" : "dagonge",
+        "follow" : "true",
+        "story" : "false",
+        "image" : "imgs/dagonge.jpg"
+    },
+    "items": {
+        "name" : "ducklove",
+        "follow" : "true",
+        "story" : "true",
+        "image" : "imgs/duck.jpg"
+    },
+    "items": {
+        "name" : "hankang",
+        "follow" : "true",
+        "story" : "false",
+        "image" : "imgs/hankang.jpg"
+    },
+    "items": {
+        "name" : "myhwangu",
+        "follow" : "false",
+        "story" : "true",
+        "image" : "imgs/hwangu.jpg"
+    },
+    "items": {
+        "name" : "jejufriend",
+        "follow" : "true",
+        "story" : "true",
+        "image" : "imgs/jeju.jpg"
+    },
+    "items": {
+        "name" : "pasionpasion",
+        "follow" : "true",
+        "story" : "false",
+        "image" : "imgs/jirisan.jpg"
+    },
+    "items": {
+        "name" : "koberip",
+        "follow" : "true",
+        "story" : "true",
+        "image" : "imgs/kobi.jpg"
+    },
+    "items": {
+        "name" : "nikeman",
+        "follow" : "true",
+        "story" : "true",
+        "image" : "imgs/nikeman.jpg"
+    },
+    "items": {
+        "name" : "megod",
+        "follow" : "true",
+        "story" : "true",
+        "image" : "imgs/megod.jpg"
+    },
+    "items": {
+        "name" : "oreum",
+        "follow" : "false",
+        "story" : "false",
+        "image" : "imgs/oreum.jpg"
+    },
+    "items": {
+        "name" : "yonginboy",
+        "follow" : "true",
+        "story" : "false",
+        "image" : "imgs/yongin.jpg"
+    }
+}
