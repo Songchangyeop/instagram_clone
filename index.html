@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- <script src="main.js" defer></script> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header id="header">
+      <div class="header__container">
+        <div class="header__logo">
+          <img src="imgs/logo.png" alt="" />
+        </div>
+        <div class="header__input">
+          <form action=""><input type="text" /></form>
+        </div>
+        <div class="header__icons">
+          <div class="icon"><i class="fas fa-home"></i></div>
+          <div class="icon"><i class="far fa-paper-plane"></i></div>
+          <div class="icon"><i class="far fa-compass"></i></div>
+          <div class="icon"><i class="far fa-heart"></i></div>
+          <div class="icon myicon">
+            <img class="myprofile-img" src="imgs/myprofile.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="main-content">
+      <div class="left-content">
+        <div class="story">
+          <div class="story__box">
+            <ul class="story__list">
+              <li class="story__item"></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="post">
+          <div class="post__header">
+            <div class="post__header-left">
+              <div class="post__profile">
+                <img
+                  class="post__profile-img"
+                  src="imgs/myprofile.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="post__name">waitwait0301</div>
+            </div>
+            <div class="post__option">
+              <i class="fas fa-ellipsis-h"></i>
+            </div>
+          </div>
+          <div class="post__main-img">
+            <img class="post__img" src="imgs/cat.jpg" alt="" />
+          </div>
+          <div class="feed">
+            <div class="feed__icon">
+              <div class="feed__icon-left">
+                <div class="icon"><i class="far fa-heart"></i></div>
+                <div class="icon"><i class="far fa-comment"></i></div>
+                <div class="icon"><i class="far fa-paper-plane"></i></div>
+              </div>
+              <div class="feed__icon-right">
+                <i class="far fa-sticky-note"></i>
+              </div>
+            </div>
+            <div class="feed__like-description"></div>
+            <div class="feed__post-description"></div>
+            <div class="feed__input">
+              <form action="">
+                <input type="text" />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="sidebar">
+        <div class="myprofile"></div>
+        <div class="recommand">
+          <div class="recommand__description">
+            <span>회원님을 위한 추천</span>
+          </div>
+          <ul class="recommand__list">
+            <li class="recommand__item"></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
