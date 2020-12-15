@@ -10,19 +10,17 @@ function loaddata() {
 const list = document.querySelector('.story__list');
 const itemLength = 80;
 let listWidth = 0;
-function displayItem(items) {
-    console.log(items)
+function displayStoryItem(items) {
     items.forEach(item => {
         if(item.follow == 'true'){
             listWidth += itemLength;
     let listItem = document.createElement('li');
+    listItem.classList.add('story__item');
     listItem.innerHTML = `
-    <li class="story__item">
                 <div class="story__item-profile">
                   <img src="${item.image}" alt="" />
                 </div>
                 <span>${item.name}</span>
-              </li>
     `;
     list.appendChild(listItem);
     }
@@ -31,4 +29,4 @@ function displayItem(items) {
 }
 
 loaddata()
-.then(items => displayItem(items));
+.then(items => displayStoryItem(items));

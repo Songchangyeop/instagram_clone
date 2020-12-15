@@ -10,7 +10,8 @@
             "name" : "mealtrip",
             "follow" : "false",
             "story" : "true",
-            "image" : "imgs/meal.jpg"
+            "image" : "imgs/meal.jpg",
+            "status" : "회원님을 위한 추천"
         },
         {
             "name" : "dagonge",
@@ -28,13 +29,15 @@
             "name" : "hankang",
             "follow" : "false",
             "story" : "false",
-            "image" : "imgs/hankang.jpg"
+            "image" : "imgs/hankang.jpg",
+            "status" : "ducklove님 외 10명이 팔로우 합니다"
         },
         {
             "name" : "myhwangu",
             "follow" : "false",
             "story" : "true",
-            "image" : "imgs/hwangu.jpg"
+            "image" : "imgs/hwangu.jpg",
+            "status" : "dagonge님 외 3명이 팔로우 합니다"
         },
         {
             "name" : "jejufriend",
@@ -70,7 +73,8 @@
             "name" : "oreum",
             "follow" : "false",
             "story" : "false",
-            "image" : "imgs/oreum.jpg"
+            "image" : "imgs/oreum.jpg",
+            "status" : "Instagram 신규 가입"
         },
         {
             "name" : "yonginboy",
