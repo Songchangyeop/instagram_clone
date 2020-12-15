@@ -7,7 +7,7 @@ body {
 #header {
   width: 100%;
   height: 55px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.205);
+  border-bottom: 1px solid #dbdbdb;
   background-color: #fff;
 }
 
@@ -29,7 +29,7 @@ body {
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  border: 1px solid #9e9e9e;
+  border: 1px solid #dbdbdb;
 }
 
 .myprofile-img {
@@ -64,7 +64,7 @@ body {
   padding: 16px 0;
   width: 620px;
   height: 85px;
-  border: 1px solid #9e9e9e;
+  border: 1px solid #dbdbdb;
   background-color: #fff;
 }
 
@@ -104,12 +104,12 @@ body {
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  border: 1px solid #9e9e9e;
+  border: 1px solid #dbdbdb;
 }
 
 /* post */
 .post {
-  border: 1px solid #9e9e9e;
+  border: 1px solid #dbdbdb;
   width: 620px;
   height: auto;
   margin-top: 30px;
@@ -118,7 +118,7 @@ body {
 .post__header {
   width: 100%;
   height: 60px;
-  border-bottom: 1px solid #9e9e9e;
+  border-bottom: 1px solid #dbdbdb;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -146,7 +146,7 @@ body {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  border: 1px solid #9e9e9e;
+  border: 1px solid #dbdbdb;
 }
 
 .post__name {
@@ -208,7 +208,7 @@ body {
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
-  border-top: 1px solid #9e9e9e;
+  border-top: 1px solid #dbdbdb;
   padding: 0px 20px;
 }
 
@@ -217,10 +217,55 @@ body {
 #sidebar {
   width: 300px;
   height: auto;
-  background-color: #9e9e9e;
   margin-top: 100px;
 }
 
+.recommand__description {
+  font-size: 14px;
+  font-weight: bold;
+  color: #8e8e8e;
+}
+
 .recommand__list {
+  width: 100%;
+  padding: 0;
   list-style: none;
+}
+
+.recommand__item {
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.recommand__left {
+  display: flex;
+}
+
+.recommand__img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #9e9e9e;
+}
+
+.recommand__profile {
+  margin-left: 15px;
+}
+
+.recommand__profile-name {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.recommand__profile-description {
+  font-size: 12px;
+}
+
+.recommand__right {
+  font-size: 12px;
+  font-weight: bold;
+  color: #0095f6;
 }
