@@ -9,7 +9,7 @@ function loaddata() {
 
 const list = document.querySelector('.story__list');
 const itemLength = 80;
-let listWidth = 80;
+let listWidth = 0;
 function displayItem(items) {
     console.log(items)
     items.forEach(item => {

@@ -16,6 +16,7 @@ body {
   max-width: 950px;
   height: 100%;
   margin: 0 auto;
+  padding: 0px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -51,7 +52,7 @@ body {
 
 /* 메인 컨텐츠 */
 
-#main-content {
+.main-content {
   max-width: 950px;
   height: 100%;
   margin: 20px auto;
@@ -214,7 +215,7 @@ body {
 
 /* 사이드바 */
 
-#sidebar {
+.sidebar {
   width: 300px;
   height: auto;
   margin-top: 100px;
@@ -268,4 +269,14 @@ body {
   font-size: 12px;
   font-weight: bold;
   color: #0095f6;
+}
+
+@media screen and (max-width: 1000px) {
+  .main-content {
+    justify-content: center;
+  }
+
+  .sidebar {
+    display: none;
+  }
 }
