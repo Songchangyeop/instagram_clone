@@ -37,6 +37,7 @@ body {
   width: 22px;
   height: 22px;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .fa-home,
@@ -89,7 +90,12 @@ body {
   height: 100%;
   font-size: 12px;
   margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   float: left;
+  cursor: pointer;
 }
 .story__item-profile {
   width: 60px;
@@ -99,6 +105,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 2px;
 }
 
 .story__item-profile > img {
@@ -202,6 +209,28 @@ body {
   margin-bottom: 10px;
 }
 
+.feed__comment-list {
+  list-style: none;
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+
+.feed__comment-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px 0 20px;
+}
+
+.feed__comment-left {
+  display: flex;
+  font-size: 14px;
+}
+
+.comment-left__name {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
 .feed__input {
   width: 100%;
   height: 55px;
@@ -213,6 +242,16 @@ body {
   padding: 0px 20px;
 }
 
+.input-comment {
+  outline: none;
+  width: 500px;
+  border: 0;
+}
+
+.uproad {
+  color: #0095f6;
+  font-weight: bold;
+}
 /* 사이드바 */
 
 .sidebar {
@@ -269,6 +308,7 @@ body {
   font-size: 12px;
   font-weight: bold;
   color: #0095f6;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1000px) {

@@ -14,6 +14,7 @@
     />
     <script src="story.js" defer></script>
     <script src="recommand.js" defer></script>
+    <script src="comment.js" defer></script>
   </head>
   <body>
     <header id="header">
@@ -77,15 +78,34 @@
               </div>
             </div>
             <div class="feed__like-description">
-              <span>송창엽님 외 300명이 좋아합니다</span>
+              <span><b>nikeman</b>님 외 300명이 좋아합니다</span>
             </div>
             <div class="feed__post-description">
-              <span>waitwait0301 우리 고양님들</span>
+              <span><b>waitwait0301</b> 우리 고양님들</span>
             </div>
+            <ul class="feed__comment-list">
+              <li class="feed__comment-item">
+                <div class="feed__comment-left">
+                  <div class="comment-left__name">
+                    <span>dagonge</span>
+                  </div>
+                  <div class="comment-left__description">
+                    <span>너무 귀엽네요 !!</span>
+                  </div>
+                </div>
+                <div class="feed__comment-heart">
+                  <i class="far fa-heart" style="font-size: 12px"></i>
+                </div>
+              </li>
+            </ul>
             <div class="feed__input">
-              <form action="">
-                <input type="text" />
-              </form>
+              <!-- <form action=""> -->
+              <input
+                class="input-comment"
+                type="text"
+                placeholder="댓글 달기..."
+              />
+              <!-- </form> -->
               <div class="uproad">
                 <span>게시</span>
               </div>
