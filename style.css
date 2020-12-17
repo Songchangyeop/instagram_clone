@@ -49,8 +49,13 @@ body {
 
 .icon {
   margin: 0px 10px;
+  cursor: pointer;
+  transition: all 150ms ease;
 }
 
+.invisible {
+  display: none;
+}
 /* 메인 컨텐츠 */
 
 .main-content {
@@ -61,6 +66,8 @@ body {
   justify-content: space-between;
   background-color: transparent;
 }
+
+/* Story */
 
 .story {
   padding: 16px 0;
@@ -74,16 +81,41 @@ body {
   overflow-x: scroll;
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
 .story__box::-webkit-scrollbar {
   display: none;
 }
 
+.story__btn-box {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn {
+  margin: 0 10px;
+  color: #ffffff;
+  /* outline: none; */
+  cursor: pointer;
+  z-index: 10;
+}
+
+.fa-chevron-circle-left,
+.fa-chevron-circle-right {
+  font-size: 20px;
+}
+
 .story__list {
+  height: 100%;
   margin: 0;
-  padding: 0 20px;
+  padding: 0 10px;
   list-style: none;
+  transition: transform 300ms ease;
 }
 .story__item {
   width: 80px;
@@ -97,6 +129,13 @@ body {
   float: left;
   cursor: pointer;
 }
+
+.story__item > span {
+  width: 60px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
 .story__item-profile {
   width: 60px;
   height: 60px;
@@ -175,6 +214,8 @@ body {
   height: 100%;
 }
 
+/* Feed */
+
 .feed {
   width: 100%;
   height: auto;
@@ -199,14 +240,36 @@ body {
   font-size: 25px;
 }
 
+.feed__heart-active {
+  color: rgb(237, 73, 86);
+}
+
 .feed__like-description {
   font-size: 14px;
   margin: 7px 20px;
 }
 
 .feed__post-description {
+  display: flex;
+  font-size: 14px;
+}
+
+.post-description {
+  width: 480px;
   margin-left: 20px;
   margin-bottom: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.desccription-open {
+  white-space: normal;
+}
+
+.readmore {
+  color: #8e8e8e;
+  cursor: pointer;
 }
 
 .feed__comment-list {
@@ -251,6 +314,8 @@ body {
 .uproad {
   color: #0095f6;
   font-weight: bold;
+  cursor: pointer;
+  opacity: 0.5;
 }
 /* 사이드바 */
 
@@ -311,6 +376,8 @@ body {
   cursor: pointer;
 }
 
+/* Media Query */
+
 @media screen and (max-width: 1000px) {
   .main-content {
     justify-content: center;
@@ -319,4 +386,36 @@ body {
   .sidebar {
     display: none;
   }
+}
+
+@media screen and (max-width: 630px) {
+  .post {
+    width: auto;
+    height: auto;
+  }
+
+  /* .header__input {
+    display: none;
+  } */
+
+  .story {
+    width: auto;
+  }
+
+  .left-content {
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+  }
+  .post__main-img {
+    height: auto;
+  }
+  .main-content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* .feed__input {
+    display: none;
+  } */
 }

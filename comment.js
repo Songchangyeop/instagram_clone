@@ -1,17 +1,23 @@
 'use strict';
-
+const uproadBtn = document.querySelector('.uproad');
 const comment = document.querySelector('.input-comment');
 let commentItems = [];
 const newItems = commentItems;
 
 comment.addEventListener('keyup', (event) => {
-    if(event.key === 'Enter') {
-        let currentValue = comment.value;
-        createElement(currentValue);
-        comment.value = '';
-    }
+  if(event.key === 'Enter') {
+      let currentValue = comment.value;
+      createElement(currentValue);
+      comment.value = '';
+  }
 });
 
+uproadBtn.addEventListener('click', () => {
+  let currentValue = comment.value;
+  createElement(currentValue);
+  comment.value = '';
+});
+  
 
 function saveElement() {
     localStorage.setItem('commentItems', JSON.stringify(newItems));
@@ -42,6 +48,7 @@ function createElement(value) {
         id : newId,
     };
     commentItems.push(ItemObj);
+    uproadBtn.classList.remove('Enter');
     saveElement(value);
 }
 
@@ -57,3 +64,15 @@ function loadData() {
 }
 
 loadData();
+
+
+// 업로드 버튼 활성화
+comment.addEventListener('click', () => {
+  uproadBtn.style.opacity = '1';
+});
+
+document.addEventListener('click', (e) => {
+  if(e.target !== comment) {
+    uproadBtn.style.opacity = '0.5';
+  }
+});

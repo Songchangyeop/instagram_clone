@@ -25,8 +25,39 @@ function displayStoryItem(items) {
     list.appendChild(listItem);
     }
 });
-    list.style.width = `${listWidth + 40}px`
+    list.style.width = `${listWidth}px`
 }
 
 loaddata()
 .then(items => displayStoryItem(items));
+
+const nextBtn = document.querySelector('.story__next-btn');
+const prevBtn = document.querySelector('.story__prev-btn');
+let translist = 0;
+nextBtn.addEventListener('click', () => {
+    if(listWidth - translist < 600) {
+        list.style.transform = `translate(-${listWidth - 600}px)`;
+        return;
+    } else {
+        translist += (itemLength * 4);
+        list.style.transform = `translate(-${translist}px)`;
+        if(listWidth - translist < 600) {
+            list.style.transform = `translate(-${listWidth - 600}px)`;
+        }
+    }
+});
+
+prevBtn.addEventListener('click', () => {
+    if(translist < 0) {
+        list.style.transform = `translate(${0}px)`;  
+        return;  
+    } else {
+        translist -= (itemLength * 4);
+        list.style.transform = `translate(${translist}px)`;
+        if(translist < 0) {
+            list.style.transform = `translate(${0}px)`;
+            translist = 0;
+        }
+    }
+    
+});
