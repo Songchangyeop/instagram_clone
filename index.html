@@ -6,7 +6,6 @@
     <title>Instagram-clone</title>
     <link rel="icon" type="image/png" href="imgs/favicon.png" />
     <link rel="stylesheet" href="style.css" />
-    <!-- <script src="main.js" defer></script> -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
@@ -17,19 +16,23 @@
     <script src="recommand.js" defer></script>
     <script src="comment.js" defer></script>
     <script src="feed-action.js" defer></script>
+    <script src="header-modal.js" defer></script>
   </head>
   <body>
+    <!-- Header -->
     <header id="header">
       <div class="header__container">
         <div class="header__logo">
-          <img src="imgs/logo.png" alt="" />
+          <a href="">
+            <img src="imgs/logo.png" alt="" />
+          </a>
         </div>
         <div class="header__input">
           <form action="">
             <input placeholder="검색" type="text" />
           </form>
         </div>
-        <div class="header__icons">
+        <div class="header__nav">
           <div class="icon"><i class="fas fa-home"></i></div>
           <div class="icon"><i class="far fa-paper-plane"></i></div>
           <div class="icon"><i class="far fa-compass"></i></div>
@@ -37,6 +40,32 @@
           <div class="icon myicon">
             <img class="myprofile-img" src="imgs/myprofile.jpg" alt="" />
           </div>
+        </div>
+      </div>
+      <div class="header__menu">
+        <div class="header__menu-modal invisible">
+          <div class="header__menu-content menu-profile">
+            <i
+              class="far fa-user-circle"
+              style="font-size: 18px; margin-right: 10px"
+            ></i
+            >프로필
+          </div>
+          <div class="header__menu-content menu-save">
+            <i
+              class="far fa-bookmark"
+              style="font-size: 18px; margin: 0px 10px 0 3px"
+            ></i
+            >저장됨
+          </div>
+          <div class="header__menu-content menu-setting">
+            <i
+              class="fas fa-cog"
+              style="font-size: 18px; margin-right: 10px"
+            ></i
+            >설정
+          </div>
+          <div class="header__menu-content menu-logout">로그아웃</div>
         </div>
       </div>
     </header>
@@ -72,6 +101,7 @@
           </div>
           <div class="post__main-img">
             <img class="post__img" src="imgs/cat.jpg" alt="" />
+            <i class="fas fa-heart heart-dbl-click"></i>
           </div>
           <!-- Feed -->
           <div class="feed">
@@ -87,7 +117,7 @@
                 <div class="icon"><i class="far fa-paper-plane"></i></div>
               </div>
               <div class="icon feed__icon-right">
-                <i class="far fa-sticky-note"></i>
+                <i class="far fa-bookmark"></i>
               </div>
             </div>
             <div class="feed__like-description">

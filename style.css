@@ -11,6 +11,16 @@ body {
   background-color: #fff;
 }
 
+.icon {
+  margin: 0px 10px;
+  cursor: pointer;
+  transition: all 150ms ease;
+}
+
+.invisible {
+  display: none;
+}
+
 /* 헤더 */
 .header__container {
   max-width: 950px;
@@ -22,7 +32,7 @@ body {
   align-items: center;
 }
 
-.header__icons {
+.header__nav {
   display: flex;
 }
 
@@ -47,15 +57,44 @@ body {
   font-size: 25px;
 }
 
-.icon {
-  margin: 0px 10px;
-  cursor: pointer;
-  transition: all 150ms ease;
+.header__menu {
+  max-width: 950px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: flex-end;
 }
 
-.invisible {
-  display: none;
+.header__menu-modal {
+  width: 230px;
+  height: auto;
+  position: absolute;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.0975);
+  border-radius: 6px;
+  z-index: 10;
+  background-color: #fff;
 }
+
+.header__menu-content {
+  width: 198px;
+  height: 20px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.header__menu-content:hover {
+  background-color: #fafafa;
+}
+
+.menu-logout {
+  border-top: 1px solid #dbdbdb;
+}
+
 /* 메인 컨텐츠 */
 
 .main-content {
@@ -207,11 +246,23 @@ body {
 .post__main-img {
   width: 100%;
   height: 620px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .post__img {
   width: 100%;
   height: 100%;
+}
+
+.heart-dbl-click {
+  font-size: 80px;
+  color: white;
+  opacity: 0.9;
+  transform: scale(0);
+  position: absolute;
+  transition: transform 100ms ease;
 }
 
 /* Feed */
@@ -236,7 +287,7 @@ body {
 }
 
 .fa-comment,
-.fa-sticky-note {
+.fa-bookmark {
   font-size: 25px;
 }
 
@@ -390,13 +441,17 @@ body {
 }
 
 @media screen and (max-width: 630px) {
+  .header__input {
+    display: none;
+  }
+
+  .header__menu {
+    padding: 0;
+  }
+
   .post {
     width: auto;
     height: auto;
-  }
-
-  .header__input {
-    display: none;
   }
 
   .story {
