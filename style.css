@@ -78,7 +78,7 @@ body {
 }
 
 .story__box {
-  overflow-x: scroll;
+  overflow-x: hidden;
   width: 100%;
   height: 100%;
   position: relative;
@@ -309,6 +309,7 @@ body {
   outline: none;
   width: 500px;
   border: 0;
+  background-color: transparent;
 }
 
 .uproad {
@@ -394,9 +395,9 @@ body {
     height: auto;
   }
 
-  /* .header__input {
+  .header__input {
     display: none;
-  } */
+  }
 
   .story {
     width: auto;
@@ -415,7 +416,10 @@ body {
     justify-content: space-between;
   }
 
-  /* .feed__input {
-    display: none;
-  } */
+  .readmore {
+    font-size: 12px;
+  }
+  .uproad {
+    font-size: 12px;
+  }
 }
