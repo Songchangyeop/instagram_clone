@@ -4,83 +4,96 @@
             "name" : "christmas25",
             "follow" : "true",
             "story" : "true",
-            "image" : "imgs/christmas.jpg"
+            "image" : "imgs/christmas.jpg",
+            "description" : "merry christmas !!"
         },
         {
             "name" : "mealtrip",
             "follow" : "false",
             "story" : "true",
             "image" : "imgs/meal.jpg",
-            "status" : "회원님을 위한 추천"
+            "status" : "회원님을 위한 추천",
+            "description" : "맛집기행"
         },
         {
             "name" : "dagonge",
             "follow" : "true",
             "story" : "false",
-            "image" : "imgs/dagonge.png"
+            "image" : "imgs/dagonge.png",
+            "description" : "사랑해 피꼬짱엽"
         },
         {
             "name" : "ducklove",
             "follow" : "true",
             "story" : "true",
-            "image" : "imgs/duck.jpg"
+            "image" : "imgs/duck.jpg",
+            "description" : "duck dunk !!"
         },
         {
             "name" : "hankang",
             "follow" : "false",
             "story" : "false",
             "image" : "imgs/hankang.jpg",
-            "status" : "ducklove님 외 10명이 팔로우 합니다"
+            "status" : "ducklove님 외 10명이 팔로우 합니다",
+            "description" : "i love Hanriver"
         },
         {
             "name" : "myhwangu",
             "follow" : "false",
             "story" : "true",
             "image" : "imgs/hwangu.jpg",
-            "status" : "dagonge님 외 3명이 팔로우 합니다"
+            "status" : "dagonge님 외 3명이 팔로우 합니다",
+            "description" : "귀여운 황구를 만남"
         },
         {
             "name" : "jejufriend",
             "follow" : "true",
             "story" : "true",
-            "image" : "imgs/jeju.jpg"
+            "image" : "imgs/jeju.jpg",
+            "description" : "island project"
         },
         {
             "name" : "pasionpasion",
             "follow" : "true",
             "story" : "false",
-            "image" : "imgs/jirisan.jpg"
+            "image" : "imgs/jirisan.jpg",
+            "description" : "열쩡 열쩡 열쩡 !!"
         },
         {
             "name" : "koberip",
             "follow" : "true",
             "story" : "true",
-            "image" : "imgs/kobi.jpg"
+            "image" : "imgs/kobi.jpg",
+            "description" : "RIP Kobe Bryant"
         },
         {
             "name" : "nikeman",
             "follow" : "true",
             "story" : "true",
-            "image" : "imgs/nikeman.jpg"
+            "image" : "imgs/nikeman.jpg",
+            "description" : "raffle life"
         },
         {
             "name" : "megod",
             "follow" : "true",
             "story" : "true",
-            "image" : "imgs/megod.png"
+            "image" : "imgs/megod.png",
+            "description" : "god of soccer"
         },
         {
             "name" : "oreum",
             "follow" : "false",
             "story" : "false",
             "image" : "imgs/oreum.jpg",
-            "status" : "Instagram 신규 가입"
+            "status" : "Instagram 신규 가입",
+            "description" : "금오름은 너무 예뻤다"
         },
         {
             "name" : "yonginboy",
             "follow" : "true",
             "story" : "false",
-            "image" : "imgs/yongin.jpg"
+            "image" : "imgs/yongin.jpg",
+            "description" : "yongincityboy"
         }
     ]
 }
