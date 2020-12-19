@@ -17,6 +17,7 @@
     <script src="comment.js" defer></script>
     <script src="feed-action.js" defer></script>
     <script src="header-modal.js" defer></script>
+    <script src="header-Input.js" defer></script>
   </head>
   <body>
     <!-- Header -->
@@ -27,11 +28,23 @@
             <img src="imgs/logo.png" alt="" />
           </a>
         </div>
-        <div class="header__input">
-          <form action="">
-            <input placeholder="검색" type="text" />
-          </form>
+        <div class="header__input-box">
+          <div class="input-search invisible">
+            <i class="fas fa-search"></i>
+          </div>
+          <div class="input-cancel invisible">
+            <i class="fas fa-times"></i>
+          </div>
+          <input class="header__input" type="text" />
+          <div class="header__input-before">
+            <i
+              class="fas fa-search"
+              style="font-size: 10px; margin-right: 5px"
+            ></i>
+            <span>검색</span>
+          </div>
         </div>
+
         <div class="header__nav">
           <div class="icon"><i class="fas fa-home"></i></div>
           <div class="icon"><i class="far fa-paper-plane"></i></div>

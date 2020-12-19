@@ -41,12 +41,13 @@ postImg.addEventListener('dblclick', () => {
 
 // Click Like Action
 function likeAction (removeClass, addClass) {
+    addClass.classList.add('invisible');
+    removeClass.classList.remove('invisible');
+    
     let like = 300;
     if(heartNormal.classList[2] == 'invisible') {
         like = 301;
     }
-    addClass.classList.add('invisible');
-    removeClass.classList.remove('invisible');
     likeCount.innerHTML = `
     <span class="like-description">
     <b>nikeman</b>님 외 ${like}명이 좋아합니다</span>`;
