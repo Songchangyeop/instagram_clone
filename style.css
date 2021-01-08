@@ -524,10 +524,18 @@ body {
 }
 
 .recommand__right {
+  cursor: pointer;
+}
+
+.follow {
   font-size: 12px;
   font-weight: bold;
   color: #0095f6;
-  cursor: pointer;
+}
+
+.following {
+  font-size: 12px;
+  font-weight: bold;
 }
 
 /* Media Query */
