@@ -11,7 +11,7 @@ const heartDblClick = document.querySelector('.heart-dbl-click');
 
 readMore.addEventListener('click', () => {
     postDescription.classList.add('desccription-open');
-    postDescription.style.width = `${500}px`;
+    postDescription.style.width = `${510}px`;
     readMore.style.display = 'none';
 });
 

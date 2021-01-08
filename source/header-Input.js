@@ -51,7 +51,6 @@ function displaySearchItem(items) {
 }
 
 function renderSearchItem(items) {
-    
     const searchText = headerInput.value;
     let filteredUsers = items.filter((item) => {
       if (item.name.toLowerCase().includes(searchText.toLowerCase())
