@@ -1,6 +1,6 @@
 # instagram_clone
 
-> 인스타그램 메인화면을 클론한 프로젝트입니다 이 프로젝트는 바닐라 JS 기능 구현이 적용 되었습니다
+> 인스타그램 메인화면을 클론한 프로젝트입니다 이 프로젝트는 HTML + CSS + 바닐라 JS 기능 구현이 적용 되었습니다
 
 웹페이지 주소 [https://songchangyeop.github.io/instagram_clone/](https://songchangyeop.github.io/instagram_clone/)
 # 1. Mock Data
