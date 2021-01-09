@@ -18,6 +18,7 @@ document.addEventListener('click', (e) => {
         inputCancel.classList.add('invisible');
         searchUser.classList.add('invisible');
         inputBefore.style.display = 'flex';
+        headerInput.value = '';
         while (searchUser.firstChild) {
             searchUser.removeChild(searchUser.firstChild);
         }
