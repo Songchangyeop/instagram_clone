@@ -3,6 +3,8 @@
 > 인스타그램 메인화면을 클론한 프로젝트입니다 이 프로젝트는 HTML + CSS + 바닐라 JS 기능 구현이 적용 되었습니다
 
 웹페이지 주소 [https://songchangyeop.github.io/instagram_clone/](https://songchangyeop.github.io/instagram_clone/)
+
+
 # 1. Mock Data
 
 > **JSON**을 이용하여 가상의 회원정보 MockData를 생성한 뒤에 fetch API를 이용하여 Data를 필요한 곳에 불러왔습니다
@@ -46,6 +48,8 @@
 # 2. Header
 
 ## 2-1 Search User
+
+
 
 ## filter Data
 
