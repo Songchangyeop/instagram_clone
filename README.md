@@ -8,7 +8,7 @@
 
 </br>
 
-![Mainpage](/imgs/insta.png)
+![Mainpage](/imgs/insta.PNG)
 
 # 1. Mock Data
 
