@@ -6,6 +6,8 @@ function loaddata() {
         .then(json => json.items);
 }
 
+loaddata()
+.then(items => displayStoryItem(items));
 
 const list = document.querySelector('.story__list');
 const itemLength = 80;
@@ -28,8 +30,7 @@ function displayStoryItem(items) {
     list.style.width = `${listWidth}px`
 }
 
-loaddata()
-.then(items => displayStoryItem(items));
+
 
 const nextBtn = document.querySelector('.story__next-btn');
 const prevBtn = document.querySelector('.story__prev-btn');

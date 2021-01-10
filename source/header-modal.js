@@ -15,4 +15,4 @@ document.addEventListener('click', (e) => {
     } else {
         headerMenu.classList.add('invisible');
     }
-})
+});

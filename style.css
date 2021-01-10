@@ -173,10 +173,10 @@ body {
   width: 230px;
   height: auto;
   position: absolute;
+  background-color: #fff;
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.0975);
   border-radius: 6px;
   z-index: 10;
-  background-color: #fff;
 }
 
 .header__menu-content {

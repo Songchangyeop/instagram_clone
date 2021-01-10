@@ -29,7 +29,7 @@ function displayRecommandItem(item) {
                   </div>
                 </div>
               </div>
-              <div class="recommand__right" data-num ="${i}"><span class="follow">팔로우</span></div>
+              <div class="recommand__right" data-id ="${i}"><span class="follow">팔로우</span></div>
         `
         recommandList.appendChild(recommandItem);
     });
@@ -42,7 +42,7 @@ recommandList.addEventListener('click', (e) => {
   const target = e.target;
   
   if(target.parentNode.classList[0] == 'recommand__right') {
-    switch(target.parentNode.dataset.num) {
+    switch(target.parentNode.dataset.id) {
       case '1': toggleFollow(0, follow);
       break;
       case '2': toggleFollow(1, follow);

@@ -25,20 +25,6 @@ heartActive.addEventListener('click', () => {
     likeAction (heartNormal, heartActive);
 });
 
-// Like click Img
-postImg.addEventListener('dblclick', () => {
-    likeAction (heartActive, heartNormal);
-
-    heartDblClick.style.transform = `scale(${1.2})`;
-    setTimeout(() => {
-        heartDblClick.style.transform = `scale(${1.0})`;
-    }, 100);
-    setTimeout(() => {
-        heartDblClick.style.transform = `scale(${0})`;
-    }, 800);
-
-});
-
 // Click Like Action
 function likeAction (removeClass, addClass) {
     addClass.classList.add('invisible');
@@ -57,3 +43,17 @@ function likeAction (removeClass, addClass) {
     removeClass.style.transform = `scale(${1.0})`;
     }, 100);
 }
+
+// Like click Img
+postImg.addEventListener('dblclick', () => {
+    likeAction (heartActive, heartNormal);
+
+    heartDblClick.style.transform = `scale(${1.2})`;
+    setTimeout(() => {
+        heartDblClick.style.transform = `scale(${1.0})`;
+    }, 100);
+    setTimeout(() => {
+        heartDblClick.style.transform = `scale(${0})`;
+    }, 800);
+
+});

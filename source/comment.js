@@ -59,7 +59,6 @@ function loadData() {
         lodedItems.forEach(loadItem => {
             createElement(loadItem.value);
         });
-        
     }
 }
 
