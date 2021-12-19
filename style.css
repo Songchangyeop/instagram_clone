@@ -105,17 +105,17 @@ body {
 	border-bottom: 1px solid #dbdbdb;
 }
 
-.userinfo-prifile-img {
+.userinfo-profile-img {
 	width: 35px;
 	height: 35px;
-	border: 3px solid #ff4081;
+	border: 2px solid #ff4081;
 	border-radius: 50%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
-.prifile-img {
+.profile-img {
 	width: 32px;
 	height: 32px;
 	border-radius: 50%;
@@ -441,6 +441,10 @@ body {
 .feed__comment-left {
 	display: flex;
 	font-size: 14px;
+}
+
+.feed__comment-delete {
+	cursor: pointer;
 }
 
 .comment-left__name {

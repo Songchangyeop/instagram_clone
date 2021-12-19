@@ -1,11 +1,10 @@
 'use strict';
 const uproadBtn = document.querySelector('.uproad');
 const comment = document.querySelector('.input-comment');
+const commentList = document.querySelector('.feed__comment-list');
 let commentItems = [];
-const newItems = commentItems;
 
 comment.addEventListener('keypress', (event) => {
-	console.log('??');
 	if (event.key === 'Enter') {
 		let currentValue = comment.value;
 		createElement(currentValue);
@@ -20,28 +19,51 @@ uproadBtn.addEventListener('click', () => {
 });
 
 function saveElement() {
-	localStorage.setItem('commentItems', JSON.stringify(newItems));
+	localStorage.setItem('commentItems', JSON.stringify(commentItems));
 }
 
-const commentList = document.querySelector('.feed__comment-list');
+function deleteToDo(event) {
+	const btn = event.target;
+	const action = btn.parentNode;
+	const li = action.parentNode;
+	commentList.removeChild(li);
+	const cleanComment = commentItems.filter(function (comment) {
+		return comment.id !== parseInt(li.id);
+	});
+	commentItems = cleanComment;
+	saveElement();
+}
 
 function createElement(value) {
 	const newId = commentItems.length + 1;
-	let commentItem = document.createElement('li');
+	const commentItem = document.createElement('li');
+	const commentLeft = document.createElement('div');
+	const commentLeftName = document.createElement('div');
+	const commentUser = document.createElement('span');
+	const commentValue = document.createElement('div');
+	const commentValueText = document.createElement('span');
+	const commentAction = document.createElement('div');
+	const commentDelete = document.createElement('span');
 	commentItem.classList.add('feed__comment-item');
-	commentItem.innerHTML = `
-    <div class="feed__comment-left">
-      <div class="comment-left__name">
-        <span>waitwait0301</span>
-      </div>
-      <div class="comment-left__description">
-        <span>${value}</span>
-      </div>
-    </div>
-    <div class="feed__comment-heart">
-      <i class="far fa-heart" style="font-size: 12px"></i>
-    </div>
-    `;
+	commentLeft.classList.add('feed__comment-left');
+	commentLeftName.classList.add('comment-left__name');
+	commentValue.classList.add('comment-left__description');
+	commentDelete.classList.add('feed__comment-delete');
+	commentUser.innerText = 'waitwait0301';
+	commentValueText.innerText = `${value}`;
+	commentDelete.innerText = '🗑';
+
+	commentDelete.addEventListener('click', deleteToDo);
+
+	commentItem.id = newId;
+
+	commentAction.appendChild(commentDelete);
+	commentLeftName.appendChild(commentUser);
+	commentValue.appendChild(commentValueText);
+	commentLeft.appendChild(commentLeftName);
+	commentLeft.appendChild(commentValue);
+	commentItem.appendChild(commentLeft);
+	commentItem.appendChild(commentAction);
 	commentList.appendChild(commentItem);
 
 	const ItemObj = {

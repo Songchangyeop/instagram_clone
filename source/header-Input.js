@@ -36,7 +36,7 @@ function displaySearchItem(items) {
 		let searchItem = document.createElement('li');
 		searchItem.classList.add('header__userinfo-item');
 		searchItem.innerHTML = `
-    <div class="userinfo-prifile-img">
+    <div class="userinfo-profile-img">
         <img class="profile-img" src="${item.image}" alt="profile-img" />
     </div>
     <div class="userinfo-profile-right">
