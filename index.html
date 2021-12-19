@@ -1,182 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Instagram-clone</title>
-    <link rel="icon" type="image/png" href="imgs/favicon.png" />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-      crossorigin="anonymous"
-    />
-    <script src="source/story.js" defer></script>
-    <script src="source/recommand.js" defer></script>
-    <script src="source/comment.js" defer></script>
-    <script src="source/feed-action.js" defer></script>
-    <script src="source/header-modal.js" defer></script>
-    <script src="source/header-Input.js" defer></script>
-  </head>
-  <body>
-    <!-- Header -->
-    <header id="header">
-      <div class="header__container">
-        <div class="header__logo">
-          <a href="">
-            <img src="imgs/logo.png" alt="" />
-          </a>
-        </div>
-        <div class="header__input-box">
-          <div class="input-search invisible">
-            <i class="fas fa-search"></i>
-          </div>
-          <div class="input-cancel invisible">
-            <i class="fas fa-times"></i>
-          </div>
-          <input class="header__input" type="text" />
-          <div class="header__input-before">
-            <i
-              class="fas fa-search"
-              style="font-size: 10px; margin-right: 5px"
-            ></i>
-            <span>검색</span>
-          </div>
-          <ul class="header__userinfo invisible"></ul>
-        </div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Instagram-clone</title>
+		<link rel="icon" type="image/png" href="imgs/favicon.png" />
+		<link rel="stylesheet" href="style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+			integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+			crossorigin="anonymous"
+		/>
+		<script src="source/story.js" defer></script>
+		<script src="source/recommand.js" defer></script>
+		<script src="source/comment.js" defer></script>
+		<script src="source/feed-action.js" defer></script>
+		<script src="source/header-modal.js" defer></script>
+		<script src="source/header-Input.js" defer></script>
+	</head>
+	<body>
+		<!-- Header -->
+		<header id="header">
+			<div class="header__container">
+				<div class="header__logo">
+					<a href="">
+						<img src="imgs/logo.png" alt="logo" />
+					</a>
+				</div>
+				<div class="header__input-box">
+					<div class="input-search invisible">
+						<i class="fas fa-search"></i>
+					</div>
+					<div class="input-cancel invisible">
+						<i class="fas fa-times"></i>
+					</div>
+					<input class="header__input" type="text" />
+					<div class="header__input-before">
+						<i
+							class="fas fa-search"
+							style="font-size: 10px; margin-right: 5px"
+						></i>
+						<span>검색</span>
+					</div>
+					<ul class="header__userinfo invisible"></ul>
+				</div>
 
-        <nav class="header__nav">
-          <div class="icon"><i class="fas fa-home"></i></div>
-          <div class="icon"><i class="far fa-paper-plane"></i></div>
-          <div class="icon"><i class="far fa-compass"></i></div>
-          <div class="icon"><i class="far fa-heart"></i></div>
-          <div class="icon myicon">
-            <img class="myprofile-img" src="imgs/myprofile.jpg" alt="" />
-          </div>
-        </nav>
-      </div>
-      <div class="header__menu">
-        <div class="header__menu-modal invisible">
-          <div class="header__menu-content menu-profile">
-            <i
-              class="far fa-user-circle"
-              style="font-size: 18px; margin-right: 10px"
-            ></i
-            >프로필
-          </div>
-          <div class="header__menu-content menu-save">
-            <i
-              class="far fa-bookmark"
-              style="font-size: 18px; margin: 0px 10px 0 3px"
-            ></i
-            >저장됨
-          </div>
-          <div class="header__menu-content menu-setting">
-            <i
-              class="fas fa-cog"
-              style="font-size: 18px; margin-right: 10px"
-            ></i
-            >설정
-          </div>
-          <div class="header__menu-content menu-logout">로그아웃</div>
-        </div>
-      </div>
-    </header>
+				<nav class="header__nav">
+					<div class="icon"><i class="fas fa-home"></i></div>
+					<div class="icon"><i class="far fa-paper-plane"></i></div>
+					<div class="icon"><i class="far fa-compass"></i></div>
+					<div class="icon"><i class="far fa-heart"></i></div>
+					<div class="icon myicon">
+						<img
+							class="myprofile-img"
+							src="imgs/myprofile.jpg"
+							alt="profileImg"
+						/>
+					</div>
+				</nav>
+			</div>
+			<div class="header__menu">
+				<div class="header__menu-modal invisible">
+					<div class="header__menu-content menu-profile">
+						<i
+							class="far fa-user-circle"
+							style="font-size: 18px; margin-right: 10px"
+						></i
+						>프로필
+					</div>
+					<div class="header__menu-content menu-save">
+						<i
+							class="far fa-bookmark"
+							style="font-size: 18px; margin: 0px 10px 0 3px"
+						></i
+						>저장됨
+					</div>
+					<div class="header__menu-content menu-setting">
+						<i
+							class="fas fa-cog"
+							style="font-size: 18px; margin-right: 10px"
+						></i
+						>설정
+					</div>
+					<div class="header__menu-content menu-logout">로그아웃</div>
+				</div>
+			</div>
+		</header>
 
-    <section class="main-content">
-      <div class="left-content">
-        <!-- Story -->
-        <div class="story">
-          <div class="story__box">
-            <div class="story__btn-box">
-              <div class="btn story__prev-btn">
-                <i class="fas fa-chevron-circle-left story__prev-bt"></i>
-              </div>
-              <div class="btn story__next-btn">
-                <i class="fas fa-chevron-circle-right"></i>
-              </div>
-            </div>
-            <ul class="story__list"></ul>
-          </div>
-        </div>
-        <!-- Post -->
-        <div class="post">
-          <div class="post__header">
-            <div class="post__header-left">
-              <div class="post__profile">
-                <img class="post__profile-img" src="imgs/dagonge.png" alt="" />
-              </div>
-              <div class="post__name">dagonge</div>
-            </div>
-            <div class="post__option">
-              <i class="fas fa-ellipsis-h"></i>
-            </div>
-          </div>
-          <div class="post__main-img">
-            <img class="post__img" src="imgs/cat.jpg" alt="" />
-            <i class="fas fa-heart heart-dbl-click"></i>
-          </div>
-          <!-- Feed -->
-          <div class="feed">
-            <div class="feed__icon">
-              <div class="feed__icon-left">
-                <div class="icon feed__heart-normal">
-                  <i class="far fa-heart"></i>
-                </div>
-                <div class="icon feed__heart-active invisible">
-                  <i class="fas fa-heart"></i>
-                </div>
-                <div class="icon"><i class="far fa-comment"></i></div>
-                <div class="icon"><i class="far fa-paper-plane"></i></div>
-              </div>
-              <div class="icon feed__icon-right">
-                <i class="far fa-bookmark"></i>
-              </div>
-            </div>
-            <div class="feed__like-description">
-              <span class="like-description"
-                ><b>nikeman</b>님 외 300명이 좋아합니다</span
-              >
-            </div>
-            <div class="feed__post-description">
-              <div class="post-description">
-                <span>
-                  <b>dagonge</b> 우리 고양님들 오늘은 사이좋게 놀고 계십니다
-                  너무 귀엽지만 싸울 때는 아주 맹수가 되어버리는 녀석들. 보고만
-                  있어도 힐링이 되는 너무 귀여운 녀석들 사랑해 아프지말고
-                  오래오래 함께 살자 피자 꼬미 💖💖💖
-                </span>
-              </div>
-              <div class="readmore">
-                <span>더 보기</span>
-              </div>
-            </div>
-            <ul class="feed__comment-list"></ul>
-            <div class="feed__input">
-              <!-- <form action=""> -->
-              <input
-                class="input-comment"
-                type="text"
-                placeholder="댓글 달기..."
-              />
-              <!-- </form> -->
-              <div class="uproad">
-                <span>게시</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+		<section class="main-content">
+			<div class="left-content">
+				<!-- Story -->
+				<div class="story">
+					<div class="story__box">
+						<div class="story__btn-box">
+							<div class="btn story__prev-btn">
+								<i class="fas fa-chevron-circle-left story__prev-bt"></i>
+							</div>
+							<div class="btn story__next-btn">
+								<i class="fas fa-chevron-circle-right"></i>
+							</div>
+						</div>
+						<ul class="story__list"></ul>
+					</div>
+				</div>
+				<!-- Post -->
+				<div class="post">
+					<div class="post__header">
+						<div class="post__header-left">
+							<div class="post__profile">
+								<img
+									class="post__profile-img"
+									src="imgs/dagonge.png"
+									alt="postImage"
+								/>
+							</div>
+							<div class="post__name">dagonge</div>
+						</div>
+						<div class="post__option">
+							<i class="fas fa-ellipsis-h"></i>
+						</div>
+					</div>
+					<div class="post__main-img">
+						<img class="post__img" src="imgs/cat.jpg" alt="postImage" />
+						<i class="fas fa-heart heart-dbl-click"></i>
+					</div>
+					<!-- Feed -->
+					<div class="feed">
+						<div class="feed__icon">
+							<div class="feed__icon-left">
+								<div class="icon feed__heart-normal">
+									<i class="far fa-heart"></i>
+								</div>
+								<div class="icon feed__heart-active invisible">
+									<i class="fas fa-heart"></i>
+								</div>
+								<div class="icon"><i class="far fa-comment"></i></div>
+								<div class="icon"><i class="far fa-paper-plane"></i></div>
+							</div>
+							<div class="icon feed__icon-right">
+								<i class="far fa-bookmark"></i>
+							</div>
+						</div>
+						<div class="feed__like-description">
+							<span class="like-description"
+								><b>nikeman</b>님 외 300명이 좋아합니다</span
+							>
+						</div>
+						<div class="feed__post-description">
+							<div class="post-description">
+								<span>
+									<b>dagonge</b> 우리 고양님들 오늘은 사이좋게 놀고 계십니다
+									너무 귀엽지만 싸울 때는 아주 맹수가 되어버리는 녀석들. 보고만
+									있어도 힐링이 되는 너무 귀여운 녀석들 사랑해 아프지말고
+									오래오래 함께 살자 피자 꼬미 !
+								</span>
+							</div>
+							<div class="readmore">
+								<span>더 보기</span>
+							</div>
+						</div>
+						<ul class="feed__comment-list"></ul>
+						<div class="feed__input">
+							<!-- <form action=""> -->
+							<input
+								class="input-comment"
+								type="text"
+								placeholder="댓글 달기..."
+							/>
+							<!-- </form> -->
+							<div class="uproad">
+								<span>게시</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
-      <div class="sidebar">
-        <div class="recommand">
-          <div class="recommand__description">
-            <span>회원님을 위한 추천</span>
-          </div>
-          <ul class="recommand__list"></ul>
-        </div>
-      </div>
-    </section>
-  </body>
+			<div class="sidebar">
+				<div class="recommand">
+					<div class="recommand__description">
+						<span>회원님을 위한 추천</span>
+					</div>
+					<ul class="recommand__list"></ul>
+				</div>
+			</div>
+		</section>
+	</body>
 </html>
