@@ -93,14 +93,14 @@ filterUsers 라는 변수를 선언한 후에 input의 입력값과 Data의 이�
 ```js
 const searchUser = document.querySelector('.header__userinfo');
 function displaySearchItem(items) {
-  while (searchUser.firstChild) {
-    // 기존의 값 모두 삭제
-    searchUser.removeChild(searchUser.firstChild);
-  }
-  items.forEach((item) => {
-    let searchItem = document.createElement('li');
-    searchItem.classList.add('header__userinfo-item');
-    searchItem.innerHTML = `
+	while (searchUser.firstChild) {
+		// 기존의 값 모두 삭제
+		searchUser.removeChild(searchUser.firstChild);
+	}
+	items.forEach((item) => {
+		let searchItem = document.createElement('li');
+		searchItem.classList.add('header__userinfo-item');
+		searchItem.innerHTML = `
     <div class="userinfo-prifile-img">
         <img class="prifile-img" src="${item.image}" alt="" />
     </div>
@@ -109,8 +109,8 @@ function displaySearchItem(items) {
         <span class="profile-description">${item.description}</span>
     </div>
     `;
-    searchUser.appendChild(searchItem);
-  });
+		searchUser.appendChild(searchItem);
+	});
 }
 ```
 
@@ -161,9 +161,9 @@ document.addEventListener('click', (e) => {
 
 ```js
 function loaddata() {
-  return fetch('data.json')
-    .then((response) => response.json())
-    .then((json) => json.items);
+	return fetch('data.json')
+		.then((response) => response.json())
+		.then((json) => json.items);
 }
 
 loaddata().then((items) => displayStoryItem(items));
@@ -172,21 +172,21 @@ const list = document.querySelector('.story__list');
 const itemLength = 80;
 let listWidth = 0;
 function displayStoryItem(items) {
-  items.forEach((item) => {
-    if (item.follow == 'true') {
-      listWidth += itemLength;
-      let listItem = document.createElement('li');
-      listItem.classList.add('story__item');
-      listItem.innerHTML = `
+	items.forEach((item) => {
+		if (item.follow == 'true') {
+			listWidth += itemLength;
+			let listItem = document.createElement('li');
+			listItem.classList.add('story__item');
+			listItem.innerHTML = `
                 <div class="story__item-profile">
                   <img src="${item.image}" alt="" />
                 </div>
                 <span>${item.name}</span>
     `;
-      list.appendChild(listItem);
-    }
-  });
-  list.style.width = `${listWidth}px`;
+			list.appendChild(listItem);
+		}
+	});
+	list.style.width = `${listWidth}px`;
 }
 ```
 
@@ -202,25 +202,25 @@ const nextBtn = document.querySelector('.story__next-btn');
 const prevBtn = document.querySelector('.story__prev-btn');
 let translist = 0; // 현재 이동한 translate 값
 nextBtn.addEventListener('click', () => {
-  translist += itemLength * 4;
-  if (listWidth - translist < 600) {
-    list.style.transform = `translate(-${listWidth - 600}px)`;
-    translist = listWidth - 600;
-    return;
-  } else {
-    list.style.transform = `translate(-${translist}px)`;
-  }
+	translist += itemLength * 4;
+	if (listWidth - translist < 600) {
+		list.style.transform = `translate(-${listWidth - 600}px)`;
+		translist = listWidth - 600;
+		return;
+	} else {
+		list.style.transform = `translate(-${translist}px)`;
+	}
 });
 
 prevBtn.addEventListener('click', () => {
-  translist -= itemLength * 4;
-  if (translist < 0) {
-    list.style.transform = `translate(${0}px)`;
-    translist = 0;
-    return;
-  } else {
-    list.style.transform = `translate(${translist}px)`;
-  }
+	translist -= itemLength * 4;
+	if (translist < 0) {
+		list.style.transform = `translate(${0}px)`;
+		translist = 0;
+		return;
+	} else {
+		list.style.transform = `translate(${translist}px)`;
+	}
 });
 ```
 
@@ -242,44 +242,44 @@ Prev버튼과 Next버튼을 생성하여 각 버튼을 클릭시 Story List가 �
 ```js
 // like
 heartNormal.addEventListener('click', () => {
-  likeAction(heartActive, heartNormal);
+	likeAction(heartActive, heartNormal);
 });
 
 // Nolike
 heartActive.addEventListener('click', () => {
-  likeAction(heartNormal, heartActive);
+	likeAction(heartNormal, heartActive);
 });
 
 // ❤ Toggle Action
 function likeAction(removeClass, addClass) {
-  addClass.classList.add('invisible');
-  removeClass.classList.remove('invisible');
+	addClass.classList.add('invisible');
+	removeClass.classList.remove('invisible');
 
-  let like = 300;
-  if (heartNormal.classList[2] == 'invisible') {
-    like = 301;
-  }
-  likeCount.innerHTML = `
+	let like = 300;
+	if (heartNormal.classList[2] == 'invisible') {
+		like = 301;
+	}
+	likeCount.innerHTML = `
     <span class="like-description">
     <b>nikeman</b>님 외 ${like}명이 좋아합니다</span>`;
 
-  removeClass.style.transform = `scale(${1.2})`;
-  setTimeout(() => {
-    removeClass.style.transform = `scale(${1.0})`;
-  }, 100);
+	removeClass.style.transform = `scale(${1.2})`;
+	setTimeout(() => {
+		removeClass.style.transform = `scale(${1.0})`;
+	}, 100);
 }
 
 // Like click Img
 postImg.addEventListener('dblclick', () => {
-  likeAction(heartActive, heartNormal);
+	likeAction(heartActive, heartNormal);
 
-  heartDblClick.style.transform = `scale(${1.2})`;
-  setTimeout(() => {
-    heartDblClick.style.transform = `scale(${1.0})`;
-  }, 100);
-  setTimeout(() => {
-    heartDblClick.style.transform = `scale(${0})`;
-  }, 800);
+	heartDblClick.style.transform = `scale(${1.2})`;
+	setTimeout(() => {
+		heartDblClick.style.transform = `scale(${1.0})`;
+	}, 100);
+	setTimeout(() => {
+		heartDblClick.style.transform = `scale(${0})`;
+	}, 800);
 });
 ```
 
@@ -313,31 +313,44 @@ function loadData() { Local Storage에 저장된 데이터를 불러오는 함�
 const commentList = document.querySelector('.feed__comment-list');
 // input의 Value를 댓글에 추가해주는 함수
 function createElement(value) {
-    const newId = commentItems.length + 1;
-    let commentItem = document.createElement('li');
-    commentItem.classList.add('feed__comment-item');
-    commentItem.innerHTML = `
-    <div class="feed__comment-left">
-      <div class="comment-left__name">
-        <span>waitwait0301</span>
-      </div>
-      <div class="comment-left__description">
-        <span>${value}</span>
-      </div>
-    </div>
-    <div class="feed__comment-heart">
-      <i class="far fa-heart" style="font-size: 12px"></i>
-    </div>
-    `
-    commentList.appendChild(commentItem);
+	const newId = commentItems.length + 1;
+	const commentItem = document.createElement('li');
+	const commentLeft = document.createElement('div');
+	const commentLeftName = document.createElement('div');
+	const commentUser = document.createElement('span');
+	const commentValue = document.createElement('div');
+	const commentValueText = document.createElement('span');
+	const commentAction = document.createElement('div');
+	const commentDelete = document.createElement('span');
+	commentItem.classList.add('feed__comment-item');
+	commentLeft.classList.add('feed__comment-left');
+	commentLeftName.classList.add('comment-left__name');
+	commentValue.classList.add('comment-left__description');
+	commentDelete.classList.add('feed__comment-delete');
+	commentUser.innerText = 'waitwait0301';
+	commentValueText.innerText = `${value}`;
+	commentDelete.innerText = '🗑';
 
-    const ItemObj = {
-        value : value,
-        id : newId,
-    };
-    commentItems.push(ItemObj);
-    uproadBtn.classList.remove('Enter');
-    saveElement(value);
+	commentDelete.addEventListener('click', deleteToDo);
+
+	commentItem.id = newId;
+
+	commentAction.appendChild(commentDelete);
+	commentLeftName.appendChild(commentUser);
+	commentValue.appendChild(commentValueText);
+	commentLeft.appendChild(commentLeftName);
+	commentLeft.appendChild(commentValue);
+	commentItem.appendChild(commentLeft);
+	commentItem.appendChild(commentAction);
+	commentList.appendChild(commentItem);
+
+	const ItemObj = {
+		value: value,
+		id: newId,
+	};
+	commentItems.push(ItemObj);
+	uproadBtn.classList.remove('Enter');
+	saveElement(value);
 }
 
 ```
@@ -390,16 +403,16 @@ overflow: hidden 옵션으로 긴 정보를 가려주고 text-overflow: ellipsis
 ```js
 const recommandList = document.querySelector('.recommand__list');
 function displayRecommandItem(item) {
-  let i = 0; //  각 회원의 id를 위한 변수 선언
-  item.forEach((item) => {
-    if (item.follow == 'true') {
-      return;
-    } else {
-      i++; //follow가 false일 경우 i가 증가되게 하여 각 회원마다 id를 부여
-    }
-    let recommandItem = document.createElement('li');
-    recommandItem.classList.add('recommand__item');
-    recommandItem.innerHTML = `
+	let i = 0; //  각 회원의 id를 위한 변수 선언
+	item.forEach((item) => {
+		if (item.follow == 'true') {
+			return;
+		} else {
+			i++; //follow가 false일 경우 i가 증가되게 하여 각 회원마다 id를 부여
+		}
+		let recommandItem = document.createElement('li');
+		recommandItem.classList.add('recommand__item');
+		recommandItem.innerHTML = `
         <div class="recommand__left">
                 <div class="recommand__item-img">
                   <img class="recommand__img" src="${item.image}" alt="${item.name}" />
@@ -413,8 +426,8 @@ function displayRecommandItem(item) {
               </div>
               <div class="recommand__right" data-id ="${i}"><span class="follow">팔로우</span></div>
         `;
-    recommandList.appendChild(recommandItem);
-  });
+		recommandList.appendChild(recommandItem);
+	});
 }
 ```
 
@@ -427,33 +440,33 @@ function displayRecommandItem(item) {
 
 ```js
 recommandList.addEventListener('click', (e) => {
-  const follow = document.querySelectorAll('.recommand__right');
-  const target = e.target;
-  if (target.parentNode.classList[0] == 'recommand__right') {
-    //클릭한 팔로우 버튼에 맞는 회원을 찾기위한 switch
-    switch (target.parentNode.dataset.id) {
-      case '1':
-        toggleFollow(0, follow);
-        break;
-      case '2':
-        toggleFollow(1, follow);
-        break;
-      case '3':
-        toggleFollow(2, follow);
-        break;
-      case '4':
-        toggleFollow(3, follow);
-        break;
-    }
-  }
+	const follow = document.querySelectorAll('.recommand__right');
+	const target = e.target;
+	if (target.parentNode.classList[0] == 'recommand__right') {
+		//클릭한 팔로우 버튼에 맞는 회원을 찾기위한 switch
+		switch (target.parentNode.dataset.id) {
+			case '1':
+				toggleFollow(0, follow);
+				break;
+			case '2':
+				toggleFollow(1, follow);
+				break;
+			case '3':
+				toggleFollow(2, follow);
+				break;
+			case '4':
+				toggleFollow(3, follow);
+				break;
+		}
+	}
 });
 
 function toggleFollow(data, follow) {
-  if (follow[data].childNodes[0].classList[0] == 'follow') {
-    follow[data].innerHTML = `<span class="following">팔로잉</span>`;
-  } else {
-    follow[data].innerHTML = `<span class="follow">팔로우</span>`;
-  }
+	if (follow[data].childNodes[0].classList[0] == 'follow') {
+		follow[data].innerHTML = `<span class="following">팔로잉</span>`;
+	} else {
+		follow[data].innerHTML = `<span class="follow">팔로우</span>`;
+	}
 }
 
 loaddata().then((item) => displayRecommandItem(item));
